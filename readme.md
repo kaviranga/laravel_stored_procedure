@@ -19,34 +19,38 @@ W.A.D.K.Gunawardhana
 
 It is simple and easy!
 * First clone this repsitory to your local machine.
-* For Windows users ,if your are running wamp stack clone this repo to "c:\wamp\www" folder.
-* For linux users first you have to install "LAMP" stack to your computer. After that clone this repository to "/var/www/html/" folder.
+* For Windows users ,if your are running wamp stack clone this repo to ***"c:\wamp\www"*** folder.
+* For linux users first you have to install "LAMP" stack to your computer. After that clone this repository to ***"/var/www/html/"*** folder.
 
 ## How to create database and tables needed to this project ? 
 * First you have to create database schema for this by issuing the command "create schema nerds;" in mysql command line interface.
 * Then by issuing the command "use nerds;" you are use that database.
 * Then you have to create the tables for the database by issuing the following command 
-   CREATE TABLE IF NOT EXISTS `document_details` (
+  ``` 
+  CREATE TABLE IF NOT EXISTS 'document_details' (
   'id' int(11) NOT NULL AUTO_INCREMENT,
   'document_name' varchar(100) NOT NULL DEFAULT '',
   'document_path' varchar(100) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY ('id')
   ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+  ```
 * After that you must create the stored procedure like below
+   ```
    CREATE DEFINER='root'@'localhost' PROCEDURE 'sp_insert_data'(IN 'userName' VARCHAR(50), IN 'Name' VARCHAR(50))
    BEGIN
       INSERT INTO user(username,name) VALUES (userName,Name);
-   END$$ 
+   END$$
+   ```
 * Now you are ready to run the project.
 
 ## How to run this project ? 
-* To run this first you must locate to your project folder , "c:\wamp\www\laravel_stored_procedure" in windows commmand prompt or "/var/www/html/laravel_stored_procedure" in linux terminal window.
-* Then isssue this command in command line window "php -S localhost:8888 -t publlic" on windows or linux.
-* Then navigate to the url "http://localhost:8888/documents/send" and you can view the web interface of the project.
+* To run this first you must locate to your project folder , ***"c:\wamp\www\laravel_stored_procedure"*** in windows commmand prompt or "/var/www/html/laravel_stored_procedure" in linux terminal window.
+* Then isssue this command in command line window ***"php -S localhost:8888 -t publlic"*** on windows or linux.
+* Then navigate to the url ***"http://localhost:8888/documents/send"*** and you can view the web interface of the project.
 * Then you can type some values in the two input boxes and send that data to the mysql database tables.
 
 ## Important!
-* You must edit ".env" file to include the database parameters according to your computers configurations.
+* You must edit ***".env"*** file to include the database parameters according to your computers configurations.
 * This is the speediest way to handling data with laravel.Because stored procedure faster than traditional sql queries. 
 
 ## License
