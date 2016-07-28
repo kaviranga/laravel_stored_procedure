@@ -21,7 +21,7 @@ It is simple and easy!
 
 ## How to create database and tables needed to this project ? 
 * First you have to create database schema for this by issuing the command ***"create schema nerds;"*** in mysql command line interface.
-* Then by issuing the command ***"use nerds;"*** you are use that database.
+* Then by issuing the command ***"use nerds;"*** you are able use that database.
 * Then you have to create the tables for the database by issuing the following command 
   ``` 
       CREATE TABLE IF NOT EXISTS 'document_details' (
