@@ -7,9 +7,6 @@ I want your feedback for this project for the future improvements.Comments are w
 
 Thank you!
 
-W.A.D.K.Gunawardhana
-2016_07_27
- 
 ## Issues
 
 * If you found a error, please send an e-mail to laravelportal[at]gmail[dot]com or,
@@ -23,8 +20,8 @@ It is simple and easy!
 * For linux users first you have to install "LAMP" stack to your computer. After that clone this repository to ***"/var/www/html/"*** folder.
 
 ## How to create database and tables needed to this project ? 
-* First you have to create database schema for this by issuing the command "create schema nerds;" in mysql command line interface.
-* Then by issuing the command "use nerds;" you are use that database.
+* First you have to create database schema for this by issuing the command ***"create schema nerds;"*** in mysql command line interface.
+* Then by issuing the command ***"use nerds;"*** you are use that database.
 * Then you have to create the tables for the database by issuing the following command 
   ``` 
       CREATE TABLE IF NOT EXISTS 'document_details' (
@@ -44,7 +41,7 @@ It is simple and easy!
 * Now you are ready to run the project.
 
 ## How to run this project ? 
-* To run this first you must locate to your project folder , ***"c:\wamp\www\laravel_stored_procedure"*** in windows commmand prompt or "/var/www/html/laravel_stored_procedure" in linux terminal window.
+* To run this first you must locate to your project folder , ***"c:\wamp\www\laravel_stored_procedure"*** in windows commmand prompt or ***"/var/www/html/laravel_stored_procedure"*** in linux terminal window.
 * Then isssue this command in command line window ***"php -S localhost:8888 -t publlic"*** on windows or linux.
 * Then navigate to the url ***"http://localhost:8888/documents/send"*** and you can view the web interface of the project.
 * Then you can type some values in the two input boxes and send that data to the mysql database tables.
