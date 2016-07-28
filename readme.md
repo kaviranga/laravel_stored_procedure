@@ -26,20 +26,20 @@ It is simple and easy!
 * First you have to create database schema for this by issuing the command "create schema nerds;" in mysql command line interface.
 * Then by issuing the command "use nerds;" you are use that database.
 * Then you have to create the tables for the database by issuing the following command 
-  ```sql 
-  CREATE TABLE IF NOT EXISTS 'document_details' (
-  'id' int(11) NOT NULL AUTO_INCREMENT,
-  'document_name' varchar(100) NOT NULL DEFAULT '',
-  'document_path' varchar(100) NOT NULL DEFAULT '',
-  PRIMARY KEY ('id')
-  ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+  ``` 
+      CREATE TABLE IF NOT EXISTS 'document_details' (
+      'id' int(11) NOT NULL AUTO_INCREMENT,
+      'document_name' varchar(100) NOT NULL DEFAULT '',
+      'document_path' varchar(100) NOT NULL DEFAULT '',
+      PRIMARY KEY ('id')
+      ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
   ```
 * After that you must create the stored procedure like below
-   ```sql
-   CREATE DEFINER='root'@'localhost' PROCEDURE 'sp_insert_data'(IN 'userName' VARCHAR(50), IN 'Name' VARCHAR(50))
-   BEGIN
-      INSERT INTO user(username,name) VALUES (userName,Name);
-   END$$
+   ```
+      CREATE DEFINER='root'@'localhost' PROCEDURE 'sp_insert_data'(IN 'userName' VARCHAR(50), IN 'Name' VARCHAR(50))
+       BEGIN
+          INSERT INTO user(username,name) VALUES (userName,Name);
+       END$$
    ```
 * Now you are ready to run the project.
 
