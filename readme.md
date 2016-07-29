@@ -15,7 +15,7 @@ Thank you!
 ## How to install this ?
 
 It is simple and easy!
-* First clone this repsitory to your local machine.
+* First clone this repsitory to your local machine using the command in terminal window ***"git clone git@github.com:kaviranga/laravel_stored_procedure.git"***.
 * For Windows users ,if your are running wamp stack clone this repo to ***"c:\wamp\www"*** folder.
 * For linux users first you have to install "LAMP" stack to your computer. After that clone this repository to ***"/var/www/html/"*** folder.
 
