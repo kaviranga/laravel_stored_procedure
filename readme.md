@@ -33,10 +33,13 @@ It is simple and easy!
   ```
 * After that you must create the stored procedure like below
    ```
-      CREATE DEFINER='root'@'localhost' PROCEDURE 'sp_insert_data'(IN 'userName' VARCHAR(50), IN 'Name' VARCHAR(50))
-       BEGIN
-          INSERT INTO user(username,name) VALUES (userName,Name);
-       END$$
+      DELIMITER//
+      CREATE PROCEDURE sp_insert_document_details
+      (IN name VARCHAR(100), IN path VARCHAR(100) )
+        BEGIN
+          INSERT INTO document_details(document_name,document_path) VALUES (name,path);
+        END//
+      DELIMITER;  
    ```
 * Now you are ready to run the project.
 
