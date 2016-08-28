@@ -10,7 +10,7 @@ Thank you!
 ## Issues
 
 * If you found a error, please send an e-mail to laravelportal[at]gmail[dot]com or,
-* Mention in the issues
+* Open a issue.
 
 ## How to install this ?
 
