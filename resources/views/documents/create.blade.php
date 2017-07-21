@@ -13,11 +13,35 @@
  
     <script src="{{asset('js/jquery.js')}}"></script>
 
-    <style>
+    <!--<style>
         body { font-family: 'Calibri'; }
-    </style>
+    </style>-->
+    <style>  
+                body  
+                {  
+                     margin:0;  
+                     padding:0;  
+                     background-color:#f1f1f1; 
+                     font-family: 'Calibri';  
+                }  
+                .box  
+                {  
+                     width:750px;  
+                     padding:20px;  
+                     background-color:#fff;  
+                     border:1px solid #ccc;  
+                     border-radius:5px;  
+                     margin-top:100px;  
+                }  
+           </style>
+    <script type="text/javascript">
+      $(document).ready(function(e){
+        console.log(e);
+      });
+    </script>
 <head/>
 <body>
+    <div class="container box">
      <div class="panel panel-primary"> 
       <div class="panel-heading">Stored Procedures Panel</div>  
       <div class="panel-body">
@@ -37,7 +61,8 @@
             <div class="col-md-6">
               <input class="form-control" name="path" type="text" id="path" value="">
             </div> 
-            <div class="col-md-6 col-md-offset-4">
+            <!--<div class="col-md-6 col-md-offset-4">-->
+            <div class="col-md-6">
                 <button type="submit" class="btn btn-success">Send Data</button>
             </div>
             <div class="col-md-6 col-md-offset-4">
@@ -45,7 +70,12 @@
             </div>
           </div>
         </form>
+      </div>
+      <div id="result" class="table-responsive">  
       </div>        
-  </div>
+     </div>
+     
+
+<!--<div class="col-md-6 col-md-offset-4">    </div>--> 
 </body>
 <html>
