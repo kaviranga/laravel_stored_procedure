@@ -34,11 +34,6 @@
                      margin-top:100px;  
                 }  
            </style>
-    <script type="text/javascript">
-      $(document).ready(function(e){
-        console.log(e);
-      });
-    </script>
 <head/>
 <body>
     <div class="container box">
@@ -74,8 +69,10 @@
       <div id="result" class="table-responsive">  
       </div>        
      </div>
-     
-
-<!--<div class="col-md-6 col-md-offset-4">    </div>--> 
+     <script type="text/javascript">
+      $(document).ready(function(e){
+        console.log(e);
+      });
+    </script> 
 </body>
 <html>
