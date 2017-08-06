@@ -1,7 +1,13 @@
 {
+  "name": "laravel_stored_procedure",
+  "author": "kaviranga",	
   "private": true,
   "devDependencies": {
     "gulp": "^3.8.8"
+  },
+  "repository"{
+  	"type": "git",
+  	"url": "git+https://github.com/kaviranga/laravel_stored_procedure"
   },
   "dependencies": {
     "laravel-elixir": "^4.0.0",
