@@ -9,7 +9,7 @@
     <title>Main template</title>
 
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
-    <link href="{{asset('css/lato.css')}}" rel="stylesheet">
+    <!--<link href="{{asset('css/lato.css')}}" rel="stylesheet">-->
  
     <script src="{{asset('js/jquery.js')}}"></script>
 
