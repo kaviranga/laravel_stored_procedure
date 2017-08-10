@@ -31,6 +31,9 @@ It is simple and easy!
       PRIMARY KEY ('id')
       ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
   ```
+
+* Or you can run ***php artisan migrate*** to create the database/schema
+  
 * After that you must create the stored procedure like below
    ```
       DELIMITER//
