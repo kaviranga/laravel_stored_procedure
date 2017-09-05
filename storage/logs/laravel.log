@@ -390,3 +390,17 @@ Stack trace:
 #9 E:\repos\laravel_stored_procedure\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #10 E:\repos\laravel_stored_procedure\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #11 {main}  
+[2017-09-05 07:20:55] local.ERROR: exception 'LogicException' with message 'Unable to prepare route [documents/send] for serialization. Uses Closure.' in E:\repos\laravel_stored_procedure\vendor\laravel\framework\src\Illuminate\Routing\Route.php:926
+Stack trace:
+#0 E:\repos\laravel_stored_procedure\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteCacheCommand.php(61): Illuminate\Routing\Route->prepareForSerialization()
+#1 [internal function]: Illuminate\Foundation\Console\RouteCacheCommand->fire()
+#2 E:\repos\laravel_stored_procedure\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#3 E:\repos\laravel_stored_procedure\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#4 E:\repos\laravel_stored_procedure\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 E:\repos\laravel_stored_procedure\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 E:\repos\laravel_stored_procedure\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 E:\repos\laravel_stored_procedure\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\RouteCacheCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 E:\repos\laravel_stored_procedure\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 E:\repos\laravel_stored_procedure\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 E:\repos\laravel_stored_procedure\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
