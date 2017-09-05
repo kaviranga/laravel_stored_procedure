@@ -12,6 +12,7 @@
     <!--<link href="{{asset('css/lato.css')}}" rel="stylesheet">-->
  
     <script src="{{asset('js/jquery.js')}}"></script>
+	<script src="{{asset('js/vue.js')}}"></script>
 
     <!--<style>
         body { font-family: 'Calibri'; }
