@@ -67,13 +67,13 @@
           </div>
         </form>
       </div>
-      <div id="result" class="table-responsive">  
+      <div id="result" class="table-responsive">
       </div>        
      </div>
      <script type="text/javascript">
       $(document).ready(function(e){
         console.log(e);
       });
-    </script> 
+    </script>
 </body>
 <html>
