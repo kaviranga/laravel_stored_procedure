@@ -24,7 +24,8 @@ Route::group(['middleware' => ['web']], function () {
 	          return DB::select('call sp_insert_document_details(?,?)',array($doc_name,$doc_path));
 	              
 	    }
-	    return redirect()->back();
+	    //return redirect()->back();
+	    return redirect()->back('documents/send');
 	});
 
 	Route::post('documents/delete',function(\Illuminate\Http\Request $request)
