@@ -1,3 +1,7 @@
+# Now this project is reached its end of life
+## but you can use this as reference to your project
+## I'll update this project with a new laravel version with addtional features
+
 # Laravel Stored Procedure
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/kaviranga/laravel_stored_procedure/blob/master/LICENSE)
 
