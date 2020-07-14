@@ -6,7 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
+<<<<<<< HEAD
         "laravel/framework": "5.2.*",
+=======
+        "laravel/framework": "5.3.*",
+>>>>>>> 6ce5c4c657e8aba00809c9ad47477b94c63bd057
         "symfony/http-foundation": "3.4.35"
     },
     "require-dev": {
