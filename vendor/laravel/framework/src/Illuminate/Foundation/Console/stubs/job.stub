@@ -2,10 +2,12 @@
 
 namespace DummyNamespace;
 
-use DummyRootNamespaceJobs\Job;
+use Illuminate\Foundation\Bus\Dispatchable;
 
-class DummyClass extends Job
+class DummyClass
 {
+    use Dispatchable;
+
     /**
      * Create a new job instance.
      *

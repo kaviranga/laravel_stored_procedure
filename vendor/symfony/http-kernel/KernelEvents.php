@@ -23,97 +23,81 @@ final class KernelEvents
      * dispatching.
      *
      * This event allows you to create a response for a request before any
-     * other code in the framework is executed. The event listener method
-     * receives a Symfony\Component\HttpKernel\Event\GetResponseEvent
-     * instance.
+     * other code in the framework is executed.
      *
-     * @Event
-     *
-     * @var string
+     * @Event("Symfony\Component\HttpKernel\Event\RequestEvent")
      */
-    const REQUEST = 'kernel.request';
+    public const REQUEST = 'kernel.request';
 
     /**
      * The EXCEPTION event occurs when an uncaught exception appears.
      *
      * This event allows you to create a response for a thrown exception or
-     * to modify the thrown exception. The event listener method receives
-     * a Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent
-     * instance.
+     * to modify the thrown exception.
      *
-     * @Event
-     *
-     * @var string
+     * @Event("Symfony\Component\HttpKernel\Event\ExceptionEvent")
      */
-    const EXCEPTION = 'kernel.exception';
+    public const EXCEPTION = 'kernel.exception';
 
     /**
      * The VIEW event occurs when the return value of a controller
      * is not a Response instance.
      *
      * This event allows you to create a response for the return value of the
-     * controller. The event listener method receives a
-     * Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent
-     * instance.
+     * controller.
      *
-     * @Event
-     *
-     * @var string
+     * @Event("Symfony\Component\HttpKernel\Event\ViewEvent")
      */
-    const VIEW = 'kernel.view';
+    public const VIEW = 'kernel.view';
 
     /**
      * The CONTROLLER event occurs once a controller was found for
      * handling a request.
      *
      * This event allows you to change the controller that will handle the
-     * request. The event listener method receives a
-     * Symfony\Component\HttpKernel\Event\FilterControllerEvent instance.
+     * request.
      *
-     * @Event
-     *
-     * @var string
+     * @Event("Symfony\Component\HttpKernel\Event\ControllerEvent")
      */
-    const CONTROLLER = 'kernel.controller';
+    public const CONTROLLER = 'kernel.controller';
+
+    /**
+     * The CONTROLLER_ARGUMENTS event occurs once controller arguments have been resolved.
+     *
+     * This event allows you to change the arguments that will be passed to
+     * the controller.
+     *
+     * @Event("Symfony\Component\HttpKernel\Event\ControllerArgumentsEvent")
+     */
+    public const CONTROLLER_ARGUMENTS = 'kernel.controller_arguments';
 
     /**
      * The RESPONSE event occurs once a response was created for
      * replying to a request.
      *
      * This event allows you to modify or replace the response that will be
-     * replied. The event listener method receives a
-     * Symfony\Component\HttpKernel\Event\FilterResponseEvent instance.
+     * replied.
      *
-     * @Event
-     *
-     * @var string
+     * @Event("Symfony\Component\HttpKernel\Event\ResponseEvent")
      */
-    const RESPONSE = 'kernel.response';
+    public const RESPONSE = 'kernel.response';
 
     /**
      * The TERMINATE event occurs once a response was sent.
      *
      * This event allows you to run expensive post-response jobs.
-     * The event listener method receives a
-     * Symfony\Component\HttpKernel\Event\PostResponseEvent instance.
      *
-     * @Event
-     *
-     * @var string
+     * @Event("Symfony\Component\HttpKernel\Event\TerminateEvent")
      */
-    const TERMINATE = 'kernel.terminate';
+    public const TERMINATE = 'kernel.terminate';
 
     /**
      * The FINISH_REQUEST event occurs when a response was generated for a request.
      *
      * This event allows you to reset the global and environmental state of
      * the application, when it was changed during the request.
-     * The event listener method receives a
-     * Symfony\Component\HttpKernel\Event\FinishRequestEvent instance.
      *
-     * @Event
-     *
-     * @var string
+     * @Event("Symfony\Component\HttpKernel\Event\FinishRequestEvent")
      */
-    const FINISH_REQUEST = 'kernel.finish_request';
+    public const FINISH_REQUEST = 'kernel.finish_request';
 }

@@ -4,14 +4,22 @@ namespace Illuminate\Database;
 
 use Faker\Factory as FakerFactory;
 use Faker\Generator as FakerGenerator;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Eloquent\QueueEntityResolver;
+use Illuminate\Contracts\Queue\EntityResolver;
 use Illuminate\Database\Connectors\ConnectionFactory;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\QueueEntityResolver;
+use Illuminate\Support\ServiceProvider;
 
 class DatabaseServiceProvider extends ServiceProvider
 {
+    /**
+     * The array of resolved Faker instances.
+     *
+     * @var array
+     */
+    protected static $fakers = [];
+
     /**
      * Bootstrap the application events.
      *
@@ -33,10 +41,20 @@ class DatabaseServiceProvider extends ServiceProvider
     {
         Model::clearBootedModels();
 
+        $this->registerConnectionServices();
+
         $this->registerEloquentFactory();
 
         $this->registerQueueableEntityResolver();
+    }
 
+    /**
+     * Register the primary database bindings.
+     *
+     * @return void
+     */
+    protected function registerConnectionServices()
+    {
         // The connection factory is used to create the actual connection instances on
         // the database. We will inject the factory into the manager so that it may
         // make the connections while they are actually needed and not of before.
@@ -63,14 +81,22 @@ class DatabaseServiceProvider extends ServiceProvider
      */
     protected function registerEloquentFactory()
     {
-        $this->app->singleton(FakerGenerator::class, function () {
-            return FakerFactory::create();
+        $this->app->singleton(FakerGenerator::class, function ($app, $parameters) {
+            $locale = $parameters['locale'] ?? $app['config']->get('app.faker_locale', 'en_US');
+
+            if (! isset(static::$fakers[$locale])) {
+                static::$fakers[$locale] = FakerFactory::create($locale);
+            }
+
+            static::$fakers[$locale]->unique(true);
+
+            return static::$fakers[$locale];
         });
 
         $this->app->singleton(EloquentFactory::class, function ($app) {
-            $faker = $app->make(FakerGenerator::class);
-
-            return EloquentFactory::construct($faker, database_path('factories'));
+            return EloquentFactory::construct(
+                $app->make(FakerGenerator::class), $this->app->databasePath('factories')
+            );
         });
     }
 
@@ -81,7 +107,7 @@ class DatabaseServiceProvider extends ServiceProvider
      */
     protected function registerQueueableEntityResolver()
     {
-        $this->app->singleton('Illuminate\Contracts\Queue\EntityResolver', function () {
+        $this->app->singleton(EntityResolver::class, function () {
             return new QueueEntityResolver;
         });
     }

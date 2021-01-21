@@ -2,7 +2,7 @@
     "name": "illuminate/routing",
     "description": "The Illuminate Routing package.",
     "license": "MIT",
-    "homepage": "http://laravel.com",
+    "homepage": "https://laravel.com",
     "support": {
         "issues": "https://github.com/laravel/framework/issues",
         "source": "https://github.com/laravel/framework"
@@ -14,17 +14,18 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9",
-        "illuminate/container": "5.2.*",
-        "illuminate/contracts": "5.2.*",
-        "illuminate/http": "5.2.*",
-        "illuminate/pipeline": "5.2.*",
-        "illuminate/session": "5.2.*",
-        "illuminate/support": "5.2.*",
-        "symfony/debug": "2.8.*|3.0.*",
-        "symfony/http-foundation": "2.8.*|3.0.*",
-        "symfony/http-kernel": "2.8.*|3.0.*",
-        "symfony/routing": "2.8.*|3.0.*"
+        "php": "^7.2.5|^8.0",
+        "ext-json": "*",
+        "illuminate/container": "^6.0",
+        "illuminate/contracts": "^6.0",
+        "illuminate/http": "^6.0",
+        "illuminate/pipeline": "^6.0",
+        "illuminate/session": "^6.0",
+        "illuminate/support": "^6.0",
+        "symfony/debug": "^4.3.4",
+        "symfony/http-foundation": "^4.3.4",
+        "symfony/http-kernel": "^4.3.4",
+        "symfony/routing": "^4.3.4"
     },
     "autoload": {
         "psr-4": {
@@ -33,12 +34,16 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "5.2-dev"
+            "dev-master": "6.x-dev"
         }
     },
     "suggest": {
-        "illuminate/console": "Required to use the make commands (5.2.*).",
-        "symfony/psr-http-message-bridge": "Required to psr7 bridging features (0.2.*)."
+        "illuminate/console": "Required to use the make commands (^6.0).",
+        "nyholm/psr7": "Required to use PSR-7 bridging features (^1.2).",
+        "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^1.2)."
+    },
+    "config": {
+        "sort-packages": true
     },
     "minimum-stability": "dev"
 }

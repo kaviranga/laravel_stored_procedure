@@ -6,8 +6,8 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*",
-        "symfony/http-foundation": "3.4.36"
+        "laravel/framework": "^6.20.12",
+        "symfony/http-foundation": "^4.3.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

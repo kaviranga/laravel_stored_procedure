@@ -2,30 +2,19 @@
 
 namespace Illuminate\Http;
 
-use Exception;
 use ArrayObject;
-use JsonSerializable;
+use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Support\Traits\Macroable;
+use JsonSerializable;
 use Symfony\Component\HttpFoundation\Response as BaseResponse;
 
 class Response extends BaseResponse
 {
-    use ResponseTrait;
-
-    /**
-     * The original content of the response.
-     *
-     * @var mixed
-     */
-    public $original;
-
-    /**
-     * The exception that triggered the error response (if applicable).
-     *
-     * @var \Exception
-     */
-    public $exception;
+    use ResponseTrait, Macroable {
+        Macroable::__call as macroCall;
+    }
 
     /**
      * Set the content on the response.
@@ -53,22 +42,9 @@ class Response extends BaseResponse
             $content = $content->render();
         }
 
-        return parent::setContent($content);
-    }
+        parent::setContent($content);
 
-    /**
-     * Morph the given content into JSON.
-     *
-     * @param  mixed   $content
-     * @return string
-     */
-    protected function morphToJson($content)
-    {
-        if ($content instanceof Jsonable) {
-            return $content->toJson();
-        }
-
-        return json_encode($content);
+        return $this;
     }
 
     /**
@@ -79,32 +55,27 @@ class Response extends BaseResponse
      */
     protected function shouldBeJson($content)
     {
-        return $content instanceof Jsonable ||
+        return $content instanceof Arrayable ||
+               $content instanceof Jsonable ||
                $content instanceof ArrayObject ||
                $content instanceof JsonSerializable ||
                is_array($content);
     }
 
     /**
-     * Get the original response content.
+     * Morph the given content into JSON.
      *
-     * @return mixed
+     * @param  mixed  $content
+     * @return string
      */
-    public function getOriginalContent()
+    protected function morphToJson($content)
     {
-        return $this->original;
-    }
+        if ($content instanceof Jsonable) {
+            return $content->toJson();
+        } elseif ($content instanceof Arrayable) {
+            return json_encode($content->toArray());
+        }
 
-    /**
-     * Set the exception to attach to the response.
-     *
-     * @param  \Exception  $e
-     * @return $this
-     */
-    public function withException(Exception $e)
-    {
-        $this->exception = $e;
-
-        return $this;
+        return json_encode($content);
     }
 }
