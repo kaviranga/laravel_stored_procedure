@@ -76,11 +76,11 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
 
     private static $freshCache = [];
 
-    public const VERSION = '4.4.18';
-    public const VERSION_ID = 40418;
+    public const VERSION = '4.4.19';
+    public const VERSION_ID = 40419;
     public const MAJOR_VERSION = 4;
     public const MINOR_VERSION = 4;
-    public const RELEASE_VERSION = 18;
+    public const RELEASE_VERSION = 19;
     public const EXTRA_VERSION = '';
 
     public const END_OF_MAINTENANCE = '11/2022';
@@ -748,7 +748,7 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
         if ($this instanceof CompilerPassInterface) {
             $container->addCompilerPass($this, PassConfig::TYPE_BEFORE_OPTIMIZATION, -10000);
         }
-        if (class_exists('ProxyManager\Configuration') && class_exists('Symfony\Bridge\ProxyManager\LazyProxy\Instantiator\RuntimeInstantiator')) {
+        if (class_exists(\ProxyManager\Configuration::class) && class_exists(RuntimeInstantiator::class)) {
             $container->setProxyInstantiator(new RuntimeInstantiator());
         }
 
@@ -766,7 +766,7 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
         // cache the container
         $dumper = new PhpDumper($container);
 
-        if (class_exists('ProxyManager\Configuration') && class_exists('Symfony\Bridge\ProxyManager\LazyProxy\PhpDumper\ProxyDumper')) {
+        if (class_exists(\ProxyManager\Configuration::class) && class_exists(ProxyDumper::class)) {
             $dumper->setProxyDumper(new ProxyDumper());
         }
 
@@ -920,6 +920,10 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
 
     public function __wakeup()
     {
+        if (\is_object($this->environment) || \is_object($this->debug)) {
+            throw new \BadMethodCallException('Cannot unserialize '.__CLASS__);
+        }
+
         if (__CLASS__ !== $c = (new \ReflectionMethod($this, 'serialize'))->getDeclaringClass()->name) {
             @trigger_error(sprintf('Implementing the "%s::serialize()" method is deprecated since Symfony 4.3.', $c), \E_USER_DEPRECATED);
             $this->unserialize($this->serialized);

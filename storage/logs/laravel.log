@@ -1606,3 +1606,90 @@ Stack trace:
 #13 D:\\projects\\php_projects\\laravel_stored_procedure\\public\\index.php(53): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #14 {main}
 "} 
+[2021-02-13 03:36:46] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:192)
+[stacktrace]
+#0 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(118): Illuminate\\Log\\LogManager->resolve(NULL)
+#1 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(98): Illuminate\\Log\\LogManager->get(NULL)
+#2 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(547): Illuminate\\Log\\LogManager->driver()
+#3 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(122): Illuminate\\Log\\LogManager->error('Declaration of ...', Array)
+#4 D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Exceptions\\Handler.php(36): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(ErrorException))
+#5 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(376): App\\Exceptions\\Handler->report(Object(ErrorException))
+#6 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(ErrorException))
+#7 D:\\projects\\php_projects\\laravel_stored_procedure\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2021-02-13 03:36:46] laravel.ERROR: Declaration of App\Providers\EventServiceProvider::boot(Illuminate\Contracts\Events\Dispatcher $events) should be compatible with Illuminate\Foundation\Support\Providers\EventServiceProvider::boot() {"exception":"[object] (ErrorException(code: 0): Declaration of App\\Providers\\EventServiceProvider::boot(Illuminate\\Contracts\\Events\\Dispatcher $events) should be compatible with Illuminate\\Foundation\\Support\\Providers\\EventServiceProvider::boot() at D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Providers\\EventServiceProvider.php:27)
+[stacktrace]
+#0 D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Providers\\EventServiceProvider.php(8): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Declaration of ...', 'D:\\\\projects\\\\php...', 27, Array)
+#1 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\composer\\ClassLoader.php(444): include('D:\\\\projects\\\\php...')
+#2 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('D:\\\\projects\\\\php...')
+#3 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\E...')
+#4 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(208): spl_autoload_call('App\\\\Providers\\\\E...')
+#5 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('App\\\\Providers\\\\E...')
+#6 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#7 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(593): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#8 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#9 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#10 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#11 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#12 D:\\projects\\php_projects\\laravel_stored_procedure\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
+[2021-02-13 03:47:21] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:192)
+[stacktrace]
+#0 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(118): Illuminate\\Log\\LogManager->resolve(NULL)
+#1 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(98): Illuminate\\Log\\LogManager->get(NULL)
+#2 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(547): Illuminate\\Log\\LogManager->driver()
+#3 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(122): Illuminate\\Log\\LogManager->error('Declaration of ...', Array)
+#4 D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Exceptions\\Handler.php(36): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(ErrorException))
+#5 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(376): App\\Exceptions\\Handler->report(Object(ErrorException))
+#6 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(ErrorException))
+#7 D:\\projects\\php_projects\\laravel_stored_procedure\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2021-02-13 03:47:21] laravel.ERROR: Declaration of App\Providers\EventServiceProvider::boot(Illuminate\Contracts\Events\Dispatcher $events) should be compatible with Illuminate\Foundation\Support\Providers\EventServiceProvider::boot() {"exception":"[object] (ErrorException(code: 0): Declaration of App\\Providers\\EventServiceProvider::boot(Illuminate\\Contracts\\Events\\Dispatcher $events) should be compatible with Illuminate\\Foundation\\Support\\Providers\\EventServiceProvider::boot() at D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Providers\\EventServiceProvider.php:27)
+[stacktrace]
+#0 D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Providers\\EventServiceProvider.php(8): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Declaration of ...', 'D:\\\\projects\\\\php...', 27, Array)
+#1 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\composer\\ClassLoader.php(444): include('D:\\\\projects\\\\php...')
+#2 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('D:\\\\projects\\\\php...')
+#3 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\E...')
+#4 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(208): spl_autoload_call('App\\\\Providers\\\\E...')
+#5 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('App\\\\Providers\\\\E...')
+#6 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#7 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(593): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#8 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#9 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#10 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#11 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#12 D:\\projects\\php_projects\\laravel_stored_procedure\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
+[2021-02-13 03:51:26] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:192)
+[stacktrace]
+#0 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(118): Illuminate\\Log\\LogManager->resolve(NULL)
+#1 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(98): Illuminate\\Log\\LogManager->get(NULL)
+#2 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(547): Illuminate\\Log\\LogManager->driver()
+#3 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(122): Illuminate\\Log\\LogManager->error('Declaration of ...', Array)
+#4 D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Exceptions\\Handler.php(36): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(ErrorException))
+#5 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(376): App\\Exceptions\\Handler->report(Object(ErrorException))
+#6 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(ErrorException))
+#7 D:\\projects\\php_projects\\laravel_stored_procedure\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2021-02-13 03:51:26] laravel.ERROR: Declaration of App\Providers\EventServiceProvider::boot(Illuminate\Contracts\Events\Dispatcher $events) should be compatible with Illuminate\Foundation\Support\Providers\EventServiceProvider::boot() {"exception":"[object] (ErrorException(code: 0): Declaration of App\\Providers\\EventServiceProvider::boot(Illuminate\\Contracts\\Events\\Dispatcher $events) should be compatible with Illuminate\\Foundation\\Support\\Providers\\EventServiceProvider::boot() at D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Providers\\EventServiceProvider.php:27)
+[stacktrace]
+#0 D:\\projects\\php_projects\\laravel_stored_procedure\\app\\Providers\\EventServiceProvider.php(8): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Declaration of ...', 'D:\\\\projects\\\\php...', 27, Array)
+#1 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\composer\\ClassLoader.php(444): include('D:\\\\projects\\\\php...')
+#2 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('D:\\\\projects\\\\php...')
+#3 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\E...')
+#4 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(208): spl_autoload_call('App\\\\Providers\\\\E...')
+#5 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('App\\\\Providers\\\\E...')
+#6 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#7 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(593): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#8 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#9 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#10 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#11 D:\\projects\\php_projects\\laravel_stored_procedure\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#12 D:\\projects\\php_projects\\laravel_stored_procedure\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
